@@ -134,7 +134,7 @@ if __name__ == "__main__":
     # Access from the Console to find TTS webapi 
     wsParam = Ws_Param(APPID='ga3c1fd1', APIKey='d74d42c34fac663b61b27890f97bfb8c',
                        APISecret='7ed4a6dde5ff170fd0f69f4999df8446',
-                       Text="อากาศดีมากในวันนี้")
+                       Text="Hello")
     websocket.enableTrace(False)
     wsUrl = wsParam.create_url()
     ws = websocket.WebSocketApp(wsUrl, on_message=on_message, on_error=on_error, on_close=on_close)
