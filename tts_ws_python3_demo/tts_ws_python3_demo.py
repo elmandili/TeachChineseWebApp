@@ -44,7 +44,7 @@ class Ws_Param(object):
         # common
         self.CommonArgs = {"app_id": self.APPID}
         # business
-        self.BusinessArgs = {"aue": "raw", "auf": "audio/L16;rate=16000", "vcn": "yingying", "tte": "utf8"}
+        self.BusinessArgs = {"aue": "raw", "auf": "audio/L16;rate=16000", "vcn": "x_john", "tte": "utf8"}
         self.Data = {"status": 2, "text": str(base64.b64encode(self.Text.encode('utf-8')), "UTF8")}
 
     def create_url(self):
@@ -134,7 +134,7 @@ if __name__ == "__main__":
     # Access from the Console to find TTS webapi 
     wsParam = Ws_Param(APPID='ga3c1fd1', APIKey='d74d42c34fac663b61b27890f97bfb8c',
                        APISecret='7ed4a6dde5ff170fd0f69f4999df8446',
-                       Text="Hello")
+                       Text="Hello, How Can I Help you today ? ")
     websocket.enableTrace(False)
     wsUrl = wsParam.create_url()
     ws = websocket.WebSocketApp(wsUrl, on_message=on_message, on_error=on_error, on_close=on_close)
